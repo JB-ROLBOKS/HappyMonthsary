@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Happy Monthsary!</title>
+
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+    <style>
+        body {
+            background: linear-gradient(to right, #ffe6f0, #e6ccff);
+            font-family: 'Segoe UI', sans-serif;
+            text-align: center;
+            padding: 30px;
+            margin: 0;
+        }
+
+        h1 {
+            color: #d63384;
+            margin-bottom: 10px;
+        }
+
+        p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 30px;
+            line-height: 1.6;
+        }
+
+        .heart {
+            font-size: 40px;
+            color: red;
+            animation: beat 1s infinite;
+        }
+
+        @keyframes beat {
+            0%, 100% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.3);
+            }
+        }
+
+        video {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.3);
+        }
+
+        .content {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="content">
+        <h1>💖😘😘😘 Happy 42nd Monthsary Babyyyyy 💖😘😘😘</h1>
+
+        <p>
+            I just want to say thank you for everything you've done for me — for making me happy, for understanding me, and for staying by my side. 😘<br><br>
+            Even though there are times we argue and fight, we still choose each other in the end, and that means everything to me. 🥺<br><br>
+            I wish I could give you flowers, expensive gifts, or anything you've ever wished for. But for now, I can't afford those things yet 😅<br><br>
+            So instead, I made this for you — a simple gift from the heart. Mwehehehe swit ku no!<br>
+            This song is for you, and I hope it makes you smile. I promise to give you more one day, when we're rich na! Mwehehehehe 😄<br><br>
+            I LOVE YOU SO MUCH! MWUAAAAAAAAHHHH 💋💗
+        </p>
+
+        <video controls>
+            <source src="myvideo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <div class="heart">❤️</div>
+    </div>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script>
+        window.onload = function () {
+            Swal.fire({
+                title: '',
+                html: `
+                        <img src="https://img.buzzfeed.com/buzzfeed-static/static/2017-07/14/3/asset/buzzfeed-prod-fastlane-02/sub-buzz-32264-1500019120-6.jpg?downsize=700%3A%2A&output-quality=auto&output-format=auto"
+                             style="width: 100%; border-radius: 10px;"><br><br>
+                        <strong>Hi love! Happy 42nd Monthsary! 🥰</strong><br>
+                        Flowers for you hehehehehe 😁😁
+                    `,
+                confirmButtonText: 'Click to next mwehehehehehe',
+                allowOutsideClick: false
+            }).then(() => {
+                Swal.fire({
+                    title: '',
+                    html: `
+                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPYaNZpSEIUhyQWs-uvLI5-o5o_sujxDTKCQ&s"
+                                 style="width: 100%; border-radius: 10px;"><br><br>
+                            <strong>This is for you and I hope you like it 😁😁</strong>
+                        `,
+                    confirmButtonText: 'I LOVE YOU BABY 💕',
+                    allowOutsideClick: false
+                }).then(() => {
+                    document.querySelector('.content').style.display = 'block';
+                });
+            });
+        };
+    </script>
+
+</body>
+</html>
